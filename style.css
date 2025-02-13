@@ -1,0 +1,443 @@
+/* General resets for padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #25b392;
+    padding: 15px 7px;
+}
+
+/* Header section */
+.header {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #c4c431;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 0 20px;
+}
+
+.header img {
+    margin-left: 20px;
+    margin-inline-end: auto;
+    height: 70px;
+    width: auto;
+    border-radius: 100%;
+}
+
+.header a {
+    margin-left: 50px;
+    color: #000000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.header a:hover {
+    color: #f1c40f; /* Golden color for hover effect */
+}
+
+
+/* About Section */
+.about {
+    background-image: url('./assets/aboutbg3.png'); 
+    background-size: cover;
+    background-position: center;
+    color: #000000; 
+    text-align: center;
+    height: 700px;
+    display: grid;
+    justify-content: center;
+    align-items: center; /* Vertically center the text */
+    padding: 0 20px; /* Horizontal padding */
+    position: relative;
+}
+
+/* Title styling (About Us) */
+.about h1 {
+    font-size: 68px;
+    color: #000000;
+    margin-right: 20px;
+    margin: 200;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adds a shadow effect to the text for readability */
+}
+
+/* Subtitle styling */
+.about h2 {
+    font-size: 40px;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    margin-right: 20px;
+    max-width: 1200px; /* Limits the text width for better readability */
+    margin-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Subtle shadow to improve text visibility */
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* Form styling */
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.form-container:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+
+h2 {
+    color: #25b392;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px;
+    background-color: #25b392;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Ensure text visibility over background image */
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to make text stand out */
+    z-index: -1; /* Keeps the overlay behind the text */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .about h1 {
+        font-size: 36px;
+    }
+
+    .about h2 {
+        font-size: 18px;
+        max-width: 90%; /* Ensures the text doesn't stretch too far on smaller screens */
+        margin-top: 10px;
+    }
+}
+
+
+/* Welcome section styling */
+.Welcome {
+    text-align: center;
+    background-color: bisque;
+    padding: 20px 0px;
+}
+
+.Welcome h1 {
+    font-size: 48px;
+    color: #c4c431;
+    margin-bottom: 10px;
+}
+
+.Welcome h3 {
+    font-size: 24px;
+    color: #d5ad27;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header a {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .Welcome h1 {
+        font-size: 36px;
+    }
+
+    .Welcome h3 {
+        font-size: 20px;
+    }
+}
+
+/* Journey Section */
+.journey {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.journey h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Unordered list styling */
+.journey ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+/* Individual Travel cards */
+.Travel {
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Image styling */
+.Travel img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Hover effect on cards */
+.Travel:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .journey ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Travel {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Stay Section */
+.Stay {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.Stay h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Unordered list styling */
+.Stay ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+/* Individual Hotel cards */
+.Hotel {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Image styling */
+.Hotel img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Title styling inside cards */
+.Hotel h3 {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+/* Hover effect on cards */
+.Hotel:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+    .Stay ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Hotel {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Light background for the contact section */
+    margin-top: 50px;
+}
+
+/* Heading Styling */
+#contact h2 {
+    font-size: 36px;
+    color: #2c3e50; /* Dark color for the title */
+    margin-bottom: 30px;
+}
+
+/* Contact Form Styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#contact-form button {
+    padding: 12px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #c4c431;
+}
+
+/* Social Links Styling */
+.social-links {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-links a {
+    font-size: 18px;
+    color: #2c3e50;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #c4c431;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #contact-form {
+        width: 90%; /* Ensure the form takes up more width on small screens */
+    }
+
+    .social-links a {
+        font-size: 16px; /* Smaller font size for social links on mobile */
+    }
+}
+
+
+
+
